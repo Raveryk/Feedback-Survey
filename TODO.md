@@ -1,22 +1,22 @@
 Setup
-[ ] create DB
-[ ] npm install, etc
+[x] create DB
+[x] npm install, npm redux react-redux, 
 [ ] 
 
 index.js
-[ ] import Redux tools
- [ ] createStore
-    [ ] createStore instance
-        [ ] put into Provider
- [ ] Wrap App in Provider
- [ ] combineReducers
- [ ] applyMiddleware/logger
+[x] import Redux tools
+ [x] createStore
+    [x] createStore instance
+        [x] put into Provider
+ [x] Wrap App in Provider
+ [x] combineReducers
+ [x] applyMiddleware/logger
 
 [ ] create reducers:
-    [ ] feelingReducer
-    [ ] contentReducer
-    [ ] supportReducer
-    [ ] commentReducer
+    [x] feelingReducer
+    [x] contentReducer
+    [x] supportReducer
+    [x] commentReducer
 
 
 COMPONENTS:
