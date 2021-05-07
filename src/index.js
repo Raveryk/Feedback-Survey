@@ -9,6 +9,10 @@ import logger from 'redux-logger';
 
 //reducer for feeling feedback
 const feelingReducer = (state=[], action) => {
+    if( action.type === 'SET_FEELING') {
+
+        return [...state, action.payload]
+    }
 
     return state
 }

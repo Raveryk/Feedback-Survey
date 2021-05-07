@@ -1,9 +1,12 @@
 import {useHistory} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 function Review() {
 
     const history = useHistory()
+
+    const feelingNum = useSelector( store => store.feelingReducer );
 
     const handleSubmit = () => {
         console.log('You submitted some feedback!');
@@ -16,6 +19,12 @@ function Review() {
     return(
         <>
         <h2>Review Your Feedback</h2>
+
+        <p>Feelings: {feelingNum} </p>
+        <p>Understanding: </p>
+        <p>Support: </p>
+        <p>Comments: </p>
+
 
         <button onClick={handleSubmit}>SUBMIT</button>
         </>

@@ -1,29 +1,40 @@
-import {useHistory} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch } from 'react-redux';
 
 function Feeling() {
+  const [feeling, setFeeling] = useState(0);
 
-    const history = useHistory()
+  const history = useHistory();
 
-    const handleNext = () => {
-        console.log('You clicked Next with Feeling');
+  const dispatch = useDispatch();
 
-        history.push('/understand')
+  const handleNext = () => {
+    console.log("You clicked Next with Feeling");
 
-    }
+    dispatch({ type: 'SET_FEELING', payload: feeling})
 
-    return(
-        <>
+    history.push("/understand");
+  };
 
-        <h2>How are you feeling today?</h2>
-        <h5>Scale from 1-6 where 1 = Very Poor and 6 = Very Well</h5>
-        <input type="number" max="6" min="1" required/>
+  return (
+    <>
+      <h2>How are you feeling today?</h2>
+      <h5>Scale from 1-6 where 1 = Very Poor and 6 = Very Well</h5>
+      <form onSubmit={handleNext}>
+      <input
+        onChange={(event) => setFeeling(event.target.value)}
+        value={feeling}
+        type="number"
+        max="6"
+        min="1"
+        required
+      />
 
-        <button onClick={handleNext}>Next</button>
-
-        </>
-
-      
-    )
+      <button type="submit">Next</button>
+      </form>
+    </>
+  );
 }
 
-export default Feeling
+export default Feeling;

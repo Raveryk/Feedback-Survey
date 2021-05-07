@@ -24,33 +24,40 @@ COMPONENTS:
 Feeling
 [x] create comp
 [x] import into App
-[ ] number input
+[x] number input
     [ ] input validation
 [x] next Button
     [x] Route to next page
+    [ ] Dispatch data
 
 Understand Content
 [x] create comp
 [x] import into App
-[ ] Number input
+[x] Number input
     [ ] input validation
 [x] next Button
     [x] Route to next page  
+    [ ] Dispatch data
+
 
 Support
 [x] create comp
 [x] import into App
-[ ] Number input
+[x] Number input
     [ ] input validation
 [x] next Button
     [x] Route to next page
+    [ ] Dispatch data
+
 
 Comments
 [x] create comp
 [x] import into App
-[ ] text input
+[x] text input
 [x] next button
     [x] Route to next page
+    [ ] Dispatch data
+
 
 Review
 [x] create comp
