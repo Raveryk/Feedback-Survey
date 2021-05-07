@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
 function Feeling() {
   const [feeling, setFeeling] = useState(0);
@@ -11,12 +11,16 @@ function Feeling() {
 
   const handleNext = (event) => {
     event.preventDefault();
-    
-    console.log("You clicked Next with Feeling");
 
-    dispatch({ type: 'SET_FEELING', payload: feeling})
+    console.log("You clicked Next with Feeling");
+    if( feeling == 0 ) {
+        alert('Please select a value.');
+    } else {
+
+    dispatch({ type: "SET_FEELING", payload: feeling });
 
     history.push("/understand");
+    }
   };
 
   return (
@@ -24,16 +28,64 @@ function Feeling() {
       <h2>How are you feeling today?</h2>
       <h5>Scale from 1-6 where 1 = Very Poor and 6 = Very Well</h5>
       <form onSubmit={handleNext}>
-      <input
+        {/* <input
         onChange={(event) => setFeeling(event.target.value)}
         value={feeling}
         type="number"
         max="6"
         min="1"
         required
-      />
+      /> */}
+        <input
+          onChange={(event) => setFeeling(event.target.value)}
+          type="radio"
+          id="1"
+          name="one"
+          value="1"
+        />1
 
-      <button type="submit">Next</button>
+        <input
+          onChange={(event) => setFeeling(event.target.value)}
+          type="radio"
+          id="2"
+          name="two"
+          value="2"
+        />2
+
+        <input
+          onChange={(event) => setFeeling(event.target.value)}
+          type="radio"
+          id="3"
+          name="three"
+          value="3"
+        />3
+
+        <input
+          onChange={(event) => setFeeling(event.target.value)}
+          type="radio"
+          id="4"
+          name="four"
+          value="4"
+        />4 
+
+        <input
+          onChange={(event) => setFeeling(event.target.value)}
+          type="radio"
+          id="5"
+          name="five"
+          value="5"
+        />5
+
+        <input
+          onChange={(event) => setFeeling(event.target.value)}
+          type="radio"
+          id="6"
+          name="six"
+          value="6"
+        />6
+        
+
+        <button type="submit">Next</button>
       </form>
     </>
   );
