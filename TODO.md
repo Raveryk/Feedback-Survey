@@ -26,31 +26,31 @@ Feeling
 [x] import into App
 [ ] number input
     [ ] input validation
-[ ] next Button
-    [ ] Route to next page
+[x] next Button
+    [x] Route to next page
 
 Understand Content
 [x] create comp
 [x] import into App
 [ ] Number input
     [ ] input validation
-[ ] next Button
-    [ ] Route to next page  
+[x] next Button
+    [x] Route to next page  
 
 Support
 [x] create comp
 [x] import into App
 [ ] Number input
     [ ] input validation
-[ ] next Button
-    [ ] Route to next page
+[x] next Button
+    [x] Route to next page
 
 Comments
 [x] create comp
 [x] import into App
 [ ] text input
-[ ] next button
-    [ ] Route to next page
+[x] next button
+    [x] Route to next page
 
 Review
 [x] create comp
@@ -58,11 +58,11 @@ Review
 [ ] useSelectors to grab Redux info
 [ ] submit button
     [ ] POST
-    [ ] Route to Success page
+    [] Route to Success page
 
 Success Page
 [x] Success text
 [ ] Button to submit new feedback - 
-    [ ] Route to beginning
+    [x] Route to beginning
     [ ] Reset all data
 
