@@ -9,7 +9,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+// app.post('/', (req, res) => {
+//     console.log('Sending feedback to DB', req.body);
+//     const feedback = req.body
+//     const sqlText = `INSERT INTO "feedback" `
+// })
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

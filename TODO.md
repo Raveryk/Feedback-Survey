@@ -12,7 +12,7 @@ index.js
  [x] combineReducers
  [x] applyMiddleware/logger
 
-[ ] create reducers:
+[x] create reducers:
     [x] feelingReducer
     [x] contentReducer
     [x] supportReducer
@@ -25,29 +25,32 @@ Feeling
 [x] create comp
 [x] import into App
 [x] number input
-    [ ] input validation
+    [x] input validation
+        [ ] better input validation
 [x] next Button
     [x] Route to next page
-    [ ] Dispatch data
+    [x] Dispatch data
 
 Understand Content
 [x] create comp
 [x] import into App
 [x] Number input
-    [ ] input validation
+    [x] input validation
+        [ ] better input validation
 [x] next Button
     [x] Route to next page  
-    [ ] Dispatch data
+    [x] Dispatch data
 
 
 Support
 [x] create comp
 [x] import into App
 [x] Number input
-    [ ] input validation
+    [x] input validation
+        [ ] better input validation
 [x] next Button
     [x] Route to next page
-    [ ] Dispatch data
+    [x] Dispatch data
 
 
 Comments
@@ -56,16 +59,16 @@ Comments
 [x] text input
 [x] next button
     [x] Route to next page
-    [ ] Dispatch data
+    [x] Dispatch data
 
 
 Review
 [x] create comp
 [x] import into App
-[ ] useSelectors to grab Redux info
+[x] useSelectors to grab Redux info
 [ ] submit button
     [ ] POST
-    [] Route to Success page
+    [x] Route to Success page
 
 Success Page
 [x] Success text

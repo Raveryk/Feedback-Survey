@@ -1,5 +1,6 @@
 import {useHistory} from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 
 function Review() {
@@ -17,7 +18,9 @@ function Review() {
     const handleSubmit = () => {
         console.log('You submitted some feedback!');
 
-        //POST route
+        //POST route in here and in server.js
+        axios.get('/')
+
         history.push('/success')
     }
 
