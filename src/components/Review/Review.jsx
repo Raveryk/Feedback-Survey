@@ -7,6 +7,10 @@ function Review() {
     const history = useHistory()
 
     const feelingNum = useSelector( store => store.feelingReducer );
+    const understandNum = useSelector( store => store.contentReducer );
+    const supportNum = useSelector( store => store.supportReducer );
+
+
 
     const handleSubmit = () => {
         console.log('You submitted some feedback!');
@@ -21,8 +25,8 @@ function Review() {
         <h2>Review Your Feedback</h2>
 
         <p>Feelings: {feelingNum} </p>
-        <p>Understanding: </p>
-        <p>Support: </p>
+        <p>Understanding: {understandNum}</p>
+        <p>Support: {supportNum}</p>
         <p>Comments: </p>
 
 

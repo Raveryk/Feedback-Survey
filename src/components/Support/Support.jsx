@@ -1,6 +1,10 @@
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch } from 'react-redux';
 
 function Support() {
+  const [ support, setSupport ] = useState(0);
+
   const history = useHistory();
 
   const handleNext = () => {

@@ -19,12 +19,20 @@ const feelingReducer = (state=[], action) => {
 
 // reducer for content feedback
 const contentReducer = (state=[], action) => {
+    if( action.type === 'SET_UNDERSTAND') {
+
+        return [...state, action.payload]
+    }
 
     return state
 }
 
 // reducer for support feedback
 const supportReducer = (state=[], action) => {
+    if( action.type === 'SET_SUPPORT') {
+
+        return [...state, action.payload]
+    }
 
     return state
 }
