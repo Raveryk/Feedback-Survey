@@ -8,40 +8,40 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 //reducer for feeling feedback
-const feelingReducer = (state=[], action) => {
+const feelingReducer = (state=(0), action) => {
     if( action.type === 'SET_FEELING') {
 
-        return [...state, action.payload]
+        return action.payload
     }
 
     return state
 }
 
 // reducer for content feedback
-const contentReducer = (state=[], action) => {
+const contentReducer = (state=(0), action) => {
     if( action.type === 'SET_UNDERSTAND') {
 
-        return [...state, action.payload]
+        return action.payload
     }
 
     return state
 }
 
 // reducer for support feedback
-const supportReducer = (state=[], action) => {
+const supportReducer = (state=(0), action) => {
     if( action.type === 'SET_SUPPORT') {
 
-        return [...state, action.payload]
+        return action.payload
     }
 
     return state
 }
 
 // reducer for extra comments
-const commentReducer = (state=[], action) => {
+const commentReducer = (state=(''), action) => {
     if( action.type === 'SET_COMMENTS') {
 
-        return [...state, action.payload]
+        return action.payload
     }
 
     return state

@@ -9,7 +9,8 @@ function Support() {
 
   const dispatch = useDispatch();
 
-  const handleNext = () => {
+  const handleNext = (event) => {
+    event.preventDefault()
     console.log("You clicked Next with Support");
 
     dispatch({ type: "SET_SUPPORT", payload: support });

@@ -38,4 +38,6 @@ if (process.env.DATABASE_URL) {
     };
 }
 
-module.exports = new pg.Pool(config);
+const pool = new pg.Pool(config);
+
+module.exports = pool;

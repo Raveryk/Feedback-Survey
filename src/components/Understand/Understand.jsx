@@ -9,7 +9,9 @@ function Understand() {
 
   const history = useHistory();
 
-  const handleNext = () => {
+  const handleNext = (event) => {
+    event.preventDefault();
+    
     console.log("You clicked Next with Understanding");
 
     dispatch({ type: "SET_UNDERSTAND", payload: understand });

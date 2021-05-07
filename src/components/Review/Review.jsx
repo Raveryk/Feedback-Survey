@@ -18,10 +18,26 @@ function Review() {
     const handleSubmit = () => {
         console.log('You submitted some feedback!');
 
-        //POST route in here and in server.js
-        axios.get('/')
+        const feedbackData = {
+            feeling: Number(feelingNum),
+            understanding: Number(understandNum),
+            support: Number(supportNum),
+            comments: commentText
+        }
 
-        history.push('/success')
+        //POST route in here and in server.js
+        axios.post('/feedback', feedbackData)
+        .then(response => {
+            console.log('Added feedback successfully.', response);
+            history.push('/success');
+            //need to reset feedback data
+        })
+        .catch( error => {
+            alert('Error submitting feedback')
+            console.log('Something went wrong entering the feedback.', error);
+        })
+
+        
     }
 
 

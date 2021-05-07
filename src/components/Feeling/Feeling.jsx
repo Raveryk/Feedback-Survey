@@ -9,7 +9,9 @@ function Feeling() {
 
   const dispatch = useDispatch();
 
-  const handleNext = () => {
+  const handleNext = (event) => {
+    event.preventDefault();
+    
     console.log("You clicked Next with Feeling");
 
     dispatch({ type: 'SET_FEELING', payload: feeling})
