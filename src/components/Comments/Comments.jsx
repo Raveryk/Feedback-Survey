@@ -1,26 +1,38 @@
-import {useHistory} from 'react-router-dom';
-
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 function Comments() {
+  const [comments, setComments] = useState("");
 
-    const history = useHistory()
+  const history = useHistory();
 
-    const handleNext = () => {
-        console.log('You clicked Next with Comments');
+  const dispatch = useDispatch();
 
-        history.push('/review')
+  const handleNext = (event) => {
+    event.preventDefault()
 
-    }
+    console.log("You clicked Next with Comments");
 
+    dispatch({ type: 'SET_COMMENTS', payload: comments })
 
-    return(
-        <>
-        <h2>Any comments you want to leave?</h2>
-        <input type="textArea" />
+    history.push("/review");
+  };
 
-        <button onClick={handleNext}>Next</button>
-        </>
-    )
+  return (
+    <>
+      <h2>Any comments you want to leave?</h2>
+      <form onSubmit={handleNext}>
+      <input
+        onChange={(event) => setComments(event.target.value)}
+        value={comments}
+        type="textArea"
+      />
+
+      <button type="submit">Next</button>
+      </form>
+    </>
+  );
 }
 
-export default Comments
+export default Comments;

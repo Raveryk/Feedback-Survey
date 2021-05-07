@@ -39,6 +39,10 @@ const supportReducer = (state=[], action) => {
 
 // reducer for extra comments
 const commentReducer = (state=[], action) => {
+    if( action.type === 'SET_COMMENTS') {
+
+        return [...state, action.payload]
+    }
 
     return state
 }

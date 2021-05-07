@@ -9,6 +9,8 @@ function Review() {
     const feelingNum = useSelector( store => store.feelingReducer );
     const understandNum = useSelector( store => store.contentReducer );
     const supportNum = useSelector( store => store.supportReducer );
+    const commentText = useSelector( store => store.commentReducer );
+
 
 
 
@@ -27,7 +29,7 @@ function Review() {
         <p>Feelings: {feelingNum} </p>
         <p>Understanding: {understandNum}</p>
         <p>Support: {supportNum}</p>
-        <p>Comments: </p>
+        <p>Comments: {commentText}</p>
 
 
         <button onClick={handleSubmit}>SUBMIT</button>
