@@ -18,7 +18,7 @@ function Review() {
         console.log('You submitted some feedback!');
 
         //POST route
-        // history.push('/success')
+        history.push('/success')
     }
 
 
