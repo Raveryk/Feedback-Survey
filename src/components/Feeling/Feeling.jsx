@@ -39,48 +39,48 @@ function Feeling() {
         <input
           onChange={(event) => setFeeling(event.target.value)}
           type="radio"
-          id="1"
-          name="one"
+          className="radio"
+          name="value"
           value="1"
         />1
 
         <input
           onChange={(event) => setFeeling(event.target.value)}
           type="radio"
-          id="2"
-          name="two"
+          className="radio"
+          name="value"
           value="2"
         />2
 
         <input
           onChange={(event) => setFeeling(event.target.value)}
           type="radio"
-          id="3"
-          name="three"
+          className="radio"
+          name="value"
           value="3"
         />3
 
         <input
           onChange={(event) => setFeeling(event.target.value)}
           type="radio"
-          id="4"
-          name="four"
+          className="radio"
+          name="value"
           value="4"
         />4 
 
         <input
           onChange={(event) => setFeeling(event.target.value)}
           type="radio"
-          id="5"
-          name="five"
+          className="radio"
+          name="value"
           value="5"
         />5
 
         <input
           onChange={(event) => setFeeling(event.target.value)}
           type="radio"
-          id="6"
-          name="six"
+          className="radio"
+          name="value"
           value="6"
         />6
         
