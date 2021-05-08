@@ -93,7 +93,6 @@ const reduxStore = createStore(
         supportReducer,
         commentReducer ,
         feedbackReducer,
-        editFeedback
     }),
     applyMiddleware(logger),
 )
