@@ -7,6 +7,7 @@ import Review from '../Review/Review';
 import Success from '../Success/Success';
 import Support from '../Support/Support';
 import Understand from '../Understand/Understand';
+// import EditFeedback from '../EditFeedback/EditFeedback';
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -45,6 +46,10 @@ function App() {
           <Route path="/success">
             <Success />
           </Route>
+
+          {/* <Route path="/edit">
+            <EditFeedback />
+          </Route> */}
 
         </Router>
       </main>
