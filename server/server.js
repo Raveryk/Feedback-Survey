@@ -41,6 +41,23 @@ app.get('/feedback', (req, res) => {
     })
 })
 
+app.delete('/feedback/:id', (req, res) => {
+
+    const feedbackId = req.params.id;
+    console.log(feedbackId);
+
+    const sqlText = `DELETE FROM "feedback" WHERE "id"=$1;`;
+    pool.query(sqlText, [feedbackId])
+    .then(response => {
+        res.sendStatus(200);
+    })
+    .catch(error => {
+        console.log('Something went wrong deleting image from DB', error);
+        res.sendStatus(500);
+    })
+    
+})
+
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);

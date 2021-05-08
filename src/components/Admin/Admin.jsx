@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import AdminItem from '../AdminItem/AdminItem';
 
 
-function Admin() {
+function Admin({getFeedback}) {
 
     // Grabbing feedback from reducer
     const feedbackList = useSelector( store => store.feedbackReducer)
@@ -23,8 +23,8 @@ function Admin() {
                 </tr>
             </thead>
             <tbody>
-                    {feedbackList.map((item, i) => {
-                        return <tr><AdminItem item={item} id={i}/></tr> 
+                    {feedbackList.map((item) => {
+                        return <tr><AdminItem item={item} getFeedback={getFeedback}/></tr> 
                         })}
             </tbody>
         </table>
