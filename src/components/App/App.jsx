@@ -20,12 +20,12 @@ function App() {
 
 
   //Getting data from DB to send to my reducer 
-  // -- eventually to be used to isolate id to edit feedback
   const getFeedback = () => {
 
   axios.get('/feedback')
     .then(response => {
         console.log('Getting feedback list from DB.', response);
+        // dispatch to redux to send feedback list to reducer
         dispatch({ type: 'SET_FEEDBACK', payload: response.data });
     })
     .catch(error => {

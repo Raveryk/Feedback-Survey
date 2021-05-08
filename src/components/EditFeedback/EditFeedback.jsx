@@ -21,8 +21,10 @@ function EditFeedback() {
     const supportNum = useSelector((store) => store.supportReducer);
     const commentText = useSelector((store) => store.commentReducer);
 
+    // function to send you back to review page to look over edits
     const toReview = () => {
-        // if any number inputs are zero don't let them move forward.
+        // multiple if else chains to either set reducer values to 
+        // previous value if no change or new value
         if( newFeeling == undefined ) {
             dispatch({ type: "SET_FEELING", payload: feelingNum})
         } else {
@@ -44,7 +46,7 @@ function EditFeedback() {
             dispatch({ type: 'SET_NEW_COMMENTS', payload: newComment })
         }
 
-
+        // send me back to review page!
         history.push('/review');
 
         }

@@ -13,10 +13,10 @@ const feelingReducer = (state=(0), action) => {
         //return number selected on feeling feedback
         return action.payload
     } else if ( action.type === 'SET_NEW_FEELING') {
-        
+        //return edited value
         return action.payload
     } else if (action.type === 'CLEAR_FEEDBACK') {
-
+        // clear on submission
         return state = (0);
     }
 
@@ -26,13 +26,13 @@ const feelingReducer = (state=(0), action) => {
 // reducer for content feedback
 const contentReducer = (state=(0), action) => {
     if( action.type === 'SET_UNDERSTAND' ) {
-        //return 
+        //return number selected on feeling feedback
         return action.payload
     } else if ( action.type === 'SET_NEW_UNDERSTAND') {
-        
+        //return edited value
         return action.payload
     } else if (action.type === 'CLEAR_FEEDBACK') {
-
+        // clear on submission
         return state = (0);
     }
 
@@ -82,10 +82,7 @@ const feedbackReducer = (state=[], action) => {
     return state
 }
 
-const editFeedback = (state={}, action) => {
-    
-    return state;
-}
+
 
 
 //create store instance

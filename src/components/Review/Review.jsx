@@ -7,12 +7,13 @@ function Review() {
 
   const dispatch = useDispatch();
 
+  // bringing reducers in from Redux to display values.
   const feelingNum = useSelector((store) => store.feelingReducer);
   const understandNum = useSelector((store) => store.contentReducer);
   const supportNum = useSelector((store) => store.supportReducer);
   const commentText = useSelector((store) => store.commentReducer);
-  
-  
+
+  // Submit button handler to capture data and send it to DB.
   const handleSubmit = () => {
 
           let feedbackData = {
@@ -28,7 +29,7 @@ function Review() {
       .then((response) => {
         console.log("Added feedback successfully.", response);
         dispatch({ type: "CLEAR_FEEDBACK" });
-
+        // if successful, push to Success page
         history.push("/success");
       })
       .catch((error) => {
@@ -37,6 +38,7 @@ function Review() {
       });
   };
 
+  // To edit page handler
   const toEdit = () => {
     history.push('/edit');
     

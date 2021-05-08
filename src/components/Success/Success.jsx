@@ -5,11 +5,10 @@ function Success() {
 
     const history = useHistory()
 
+    // Returns you back to start of survey
     const returnHome = () => {
         history.push('/')
     }
-
-
 
     return(
         <>
