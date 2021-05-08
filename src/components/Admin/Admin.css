@@ -1,0 +1,10 @@
+.adminTable, td, th {
+
+    border: 1px solid black;
+}
+
+.adminTable{
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+}
