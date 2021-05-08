@@ -7,6 +7,8 @@ function Admin({getFeedback}) {
 
     // Grabbing feedback list from reducer
     const feedbackList = useSelector( store => store.feedbackReducer)
+    // call list of feedback
+    getFeedback();
 
     return(
 
