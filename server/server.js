@@ -27,6 +27,37 @@ pool.query(sqlText, [ feedback.feeling, feedback.understanding, feedback.support
 })
 });
 
+app.get('/feedback', (req, res) => {
+    console.log('Getting feedback from DB', );
+
+    const sqlText = `SELECT * FROM "feedback" ORDER BY "id" ASC;`;
+    pool.query(sqlText)
+    .then(result => {
+        res.send(result.rows);
+    })
+    .catch(error => {
+        res.sendStatus(error);
+        alert('Trouble getting feedback from DB.')
+    })
+})
+
+app.delete('/feedback/:id', (req, res) => {
+
+    const feedbackId = req.params.id;
+    console.log(feedbackId);
+
+    const sqlText = `DELETE FROM "feedback" WHERE "id"=$1;`;
+    pool.query(sqlText, [feedbackId])
+    .then(response => {
+        res.sendStatus(200);
+    })
+    .catch(error => {
+        console.log('Something went wrong deleting image from DB', error);
+        res.sendStatus(500);
+    })
+    
+})
+
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);

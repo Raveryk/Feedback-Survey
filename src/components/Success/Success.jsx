@@ -9,9 +9,9 @@ function Success() {
         history.push('/')
     }
 
-    // const toEdit = () => {
-    //     history.push('/edit');
-    // }
+    const toEdit = () => {
+        history.push('/edit');
+    }
 
 
     return(
@@ -19,7 +19,7 @@ function Success() {
         <h2>Success Submitting Feedback!</h2>
 
         <button onClick={returnHome}>Leave New Feedback</button>
-        {/* <p><button onClick={toEdit}>Edit Feedback</button></p> */}
+        <p><button onClick={toEdit}>Edit Feedback</button></p>
 
         </>
        
