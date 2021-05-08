@@ -9,11 +9,12 @@ function Comments() {
 
   const dispatch = useDispatch();
 
+  // function to handle dispatch to redux and move to next page
   const handleNext = (event) => {
     event.preventDefault()
 
     console.log("You clicked Next with Comments");
-
+    // send comments to redux reducer
     dispatch({ type: 'SET_COMMENTS', payload: comments })
 
     history.push("/review");

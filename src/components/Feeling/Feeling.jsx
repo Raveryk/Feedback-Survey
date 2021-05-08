@@ -3,20 +3,23 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 function Feeling() {
+
+    // local state to hold feeling value
   const [feeling, setFeeling] = useState(0);
 
   const history = useHistory();
-
   const dispatch = useDispatch();
 
+  // next button handler to send to next page and dispatch data
   const handleNext = (event) => {
     event.preventDefault();
 
     console.log("You clicked Next with Feeling");
+    // conditional to require value above 0.
     if( feeling == 0 ) {
         alert('Please select a value.');
     } else {
-
+        // dispatch to reducer
     dispatch({ type: "SET_FEELING", payload: feeling });
 
     history.push("/understand");
@@ -28,14 +31,7 @@ function Feeling() {
       <h2>How are you feeling today?</h2>
       <h5>Scale from 1-6 where 1 = Very Poor and 6 = Very Well</h5>
       <form onSubmit={handleNext}>
-        {/* <input
-        onChange={(event) => setFeeling(event.target.value)}
-        value={feeling}
-        type="number"
-        max="6"
-        min="1"
-        required
-      /> */}
+        
         <input
           onChange={(event) => setFeeling(event.target.value)}
           type="radio"
