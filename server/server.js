@@ -27,6 +27,20 @@ pool.query(sqlText, [ feedback.feeling, feedback.understanding, feedback.support
 })
 });
 
+app.get('/feedback', (req, res) => {
+    console.log('Getting feedback from DB', );
+
+    const sqlText = `SELECT * FROM "feedback" ORDER BY "id" ASC;`;
+    pool.query(sqlText)
+    .then(result => {
+        res.send(result.rows);
+    })
+    .catch(error => {
+        res.sendStatus(error);
+        alert('Trouble getting feedback from DB.')
+    })
+})
+
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);

@@ -7,12 +7,36 @@ import Review from '../Review/Review';
 import Success from '../Success/Success';
 import Support from '../Support/Support';
 import Understand from '../Understand/Understand';
-// import EditFeedback from '../EditFeedback/EditFeedback';
+import EditFeedback from '../EditFeedback/EditFeedback';
+import Admin from '../Admin/Admin';
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 
 function App() {
+
+  const dispatch = useDispatch();
+
+
+  //Getting data from DB to send to my reducer 
+  // -- eventually to be used to isolate id to edit feedback
+  const getFeedback = () => {
+
+  axios.get('/feedback')
+    .then(response => {
+        console.log('Getting feedback list from DB.', response);
+        dispatch({ type: 'SET_FEEDBACK', payload: response.data });
+    })
+    .catch(error => {
+        console.log('Something went wrong getting feedback from DB.', error);
+    })
+  }
+
+  // calling GET function to get data from DB and send it to reducer
+  getFeedback();
+
+
 
   return (
     <div className='App'>
@@ -47,9 +71,13 @@ function App() {
             <Success />
           </Route>
 
-          {/* <Route path="/edit">
+          <Route path="/edit">
             <EditFeedback />
-          </Route> */}
+          </Route>
+
+          <Route path="/admin">
+            <Admin />
+          </Route>
 
         </Router>
       </main>
