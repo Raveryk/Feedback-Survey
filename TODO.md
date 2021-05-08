@@ -26,7 +26,7 @@ Feeling
 [x] import into App
 [x] number input
     [x] input validation
-        [ ] better input validation
+        [x] better input validation
 [x] next Button
     [x] Route to next page
     [x] Dispatch data
@@ -36,7 +36,7 @@ Understand Content
 [x] import into App
 [x] Number input
     [x] input validation
-        [ ] better input validation
+        [x] better input validation
 [x] next Button
     [x] Route to next page  
     [x] Dispatch data
@@ -47,7 +47,7 @@ Support
 [x] import into App
 [x] Number input
     [x] input validation
-        [ ] better input validation
+        [x] better input validation
 [x] next Button
     [x] Route to next page
     [x] Dispatch data
@@ -67,7 +67,7 @@ Review
 [x] import into App
 [x] useSelectors to grab Redux info
 [ ] submit button
-    [ ] POST
+    [x] POST
     [x] Route to Success page
 
 Success Page

@@ -12,6 +12,9 @@ const feelingReducer = (state=(0), action) => {
     if( action.type === 'SET_FEELING') {
 
         return action.payload
+    } else if (action.type === 'CLEAR_FEEDBACK') {
+
+        return state = (0);
     }
 
     return state
@@ -22,6 +25,9 @@ const contentReducer = (state=(0), action) => {
     if( action.type === 'SET_UNDERSTAND') {
 
         return action.payload
+    } else if (action.type === 'CLEAR_FEEDBACK') {
+
+        return state = (0);
     }
 
     return state
@@ -32,6 +38,9 @@ const supportReducer = (state=(0), action) => {
     if( action.type === 'SET_SUPPORT') {
 
         return action.payload
+    } else if (action.type === 'CLEAR_FEEDBACK') {
+
+        return state = (0);
     }
 
     return state
@@ -42,6 +51,9 @@ const commentReducer = (state=(''), action) => {
     if( action.type === 'SET_COMMENTS') {
 
         return action.payload
+    } else if (action.type === 'CLEAR_FEEDBACK') {
+
+        return state = ('');
     }
 
     return state

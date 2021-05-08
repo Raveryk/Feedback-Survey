@@ -1,11 +1,13 @@
 import {useHistory} from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 
 
 function Review() {
 
     const history = useHistory()
+
+    const dispatch = useDispatch();
 
     const feelingNum = useSelector( store => store.feelingReducer );
     const understandNum = useSelector( store => store.contentReducer );
@@ -29,8 +31,9 @@ function Review() {
         axios.post('/feedback', feedbackData)
         .then(response => {
             console.log('Added feedback successfully.', response);
+            dispatch({ type: 'CLEAR_FEEDBACK' });
+
             history.push('/success');
-            //need to reset feedback data
         })
         .catch( error => {
             alert('Error submitting feedback')
