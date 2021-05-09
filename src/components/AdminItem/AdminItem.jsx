@@ -1,5 +1,8 @@
 import axios from "axios";
 
+import Button from '@material-ui/core/Button'
+import DeleteIcon from '@material-ui/icons/Delete';
+
 function AdminItem({ item, getFeedback }) {
   // function to delete targeted feedback
   const deleteFeedback = (event) => {
@@ -23,7 +26,7 @@ function AdminItem({ item, getFeedback }) {
       <td id={item.id}>{item.comments}</td>
       <td id={item.id}>{item.date.slice(5, 10)}</td>
       <td id={item.id}>
-        <button onClick={() => deleteFeedback(event)}>DELETE</button>
+        <Button startIcon={<DeleteIcon/>} onClick={() => deleteFeedback(event)}></Button>
       </td>
     </>
   );
