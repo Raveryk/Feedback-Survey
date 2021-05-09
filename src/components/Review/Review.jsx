@@ -2,6 +2,9 @@ import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 
+import Card from "@material-ui/core/Card";
+import Button from "@material-ui/core/Button";
+
 function Review() {
   const history = useHistory();
 
@@ -15,14 +18,13 @@ function Review() {
 
   // Submit button handler to capture data and send it to DB.
   const handleSubmit = () => {
+    let feedbackData = {
+      feeling: Number(feelingNum),
+      understanding: Number(understandNum),
+      support: Number(supportNum),
+      comments: commentText,
+    };
 
-          let feedbackData = {
-            feeling: Number(feelingNum),
-            understanding: Number(understandNum),
-            support: Number(supportNum),
-            comments: commentText
-          } 
-      
     //POST route in here and in server.js
     axios
       .post("/feedback", feedbackData)
@@ -40,13 +42,13 @@ function Review() {
 
   // To edit page handler
   const toEdit = () => {
-    history.push('/edit');
-    
-}
+    history.push("/edit");
+  };
 
   return (
     <>
-      <h2>Review Your Feedback</h2>
+      <Card elevation={6} className="card">
+        <h2>Review Your Feedback</h2>
 
         <>
           <p>Feelings: {feelingNum} </p>
@@ -54,12 +56,16 @@ function Review() {
           <p>Support: {supportNum}</p>
           <p>Comments: {commentText}</p>
         </>
-    
 
-      <button onClick={handleSubmit}>SUBMIT</button>
-      <p>
-        <button onClick={toEdit}>Edit Feedback</button>
-      </p>
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          SUBMIT
+        </Button>
+        <p>
+          <Button variant="outlined" color="primary" onClick={toEdit}>
+            Edit Feedback
+          </Button>
+        </p>
+      </Card>
     </>
   );
 }

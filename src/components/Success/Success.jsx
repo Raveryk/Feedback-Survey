@@ -1,24 +1,27 @@
-import {useHistory} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
+import Card from "@material-ui/core/Card";
+import Button from "@material-ui/core/Button";
 
 function Success() {
+  const history = useHistory();
 
-    const history = useHistory()
+  // Returns you back to start of survey
+  const returnHome = () => {
+    history.push("/");
+  };
 
-    // Returns you back to start of survey
-    const returnHome = () => {
-        history.push('/')
-    }
-
-    return(
-        <>
+  return (
+    <>
+      <Card elevation={6} className="card">
         <h2>Success Submitting Feedback!</h2>
 
-        <button onClick={returnHome}>Leave New Feedback</button>
-
-        </>
-       
-    )
+        <Button variant="outlined" color="primary" onClick={returnHome}>
+          Leave New Feedback
+        </Button>
+      </Card>
+    </>
+  );
 }
 
-export default Success
+export default Success;
