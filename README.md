@@ -9,9 +9,9 @@ For this project I created a feedback survey that utilizes multiple components (
 
 ## Screen Shot
 
-<img src="Screen Shot 2021-05-09 at 4.38.11 PM.png">
-<img src="Screen Shot 2021-05-09 at 4.38.30 PM.png">
-<img src="Screen Shot 2021-05-09 at 4.38.47 PM.png">
+<img src="public/images/Screen Shot 2021-05-09 at 4.38.11 PM.png">
+<img src="public/images/Screen Shot 2021-05-09 at 4.38.30 PM.png">
+<img src="public/images/Screen Shot 2021-05-09 at 4.38.47 PM.png">
 
 
 ### Prerequisites
